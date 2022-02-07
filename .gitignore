@@ -12,3 +12,10 @@ gradle-app.setting
 
 # # Work around httpsyoutrack.jetbrains.comissueIDEA-116898
 # gradlewrappergradle-wrapper.properties
+
+# INTELLIJ
+.idea
+
+# GRADLE
+gradlew*
+gradle-wrapper.jar
