@@ -1,0 +1,119 @@
+:root {
+    --primary-bg-color: #181414;
+    --secondary-bg-color: #2c2828;
+    --tetirary-bg-color: #29282c;
+    --special-bg-color: #000000;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+}
+
+body {
+    padding: 10vh 0 0 0;
+    background-color: var(--primary-bg-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: red;
+}
+
+a:visited {
+    color: inherit;
+}
+
+p.tabbed {
+    padding-left: 2ch; 
+}
+
+.template {
+    display: none;
+}
+
+iframe#github-iframe {
+    color: white;
+    width: 100%;
+}
+
+nav#side-nav {
+    position: fixed;
+    z-index: 1;
+    padding: 2vh 1vw;
+    min-width: 22ch;
+    background-color: var(--tetirary-bg-color);
+}
+
+nav#side-nav > ul > li {
+    padding: .7ch 2ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+
+nav#center-nav {
+    display: none;
+    background-color: var(--special-bg-color);
+}
+
+nav#center-nav > ul > li {
+    display: inline;
+    padding: .7ch 2ch;
+}
+
+div.flex-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#centered {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+
+    background-color: var(--secondary-bg-color);
+    transition: width .5s linear;
+}
+
+header {
+    text-align: center;
+    padding: 4vh 2vw;
+
+    background-color: var(--tetirary-bg-color);
+}
+
+main {
+    /* padding: 0 10vw; */
+}
+
+article {
+    padding: 2vh 1vw;
+}
+
+@media screen and (max-width: 1200px) {
+    
+    nav#side-nav {
+        display: none;
+    }
+    
+    nav#center-nav { 
+        display: block;
+    }
+
+    div#centered {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    
+    div#centered {
+        width: auto;
+    }
+}
