@@ -12,6 +12,9 @@
     <nav id="side-nav">
         <ul>
             <li><a href="#">Top</a></li>
+            <li><a href="#Algorithm-Development-Process">Algorithm-Development-Process</a></li>
+            <li><a href="#Big-O-Time-Complexities">Big-O-Time-Complexities</a></li>
+            <li><a href="#Data-Structues">Data-Structues</a></li>
             <li><a href="#Two-Pointer">Two-Pointer</a></li>
             <li><a href="#Pair-Step">Pair-Step</a></li>
             <!-- <li><a href="#Algo-link">Algo-link</a></li> -->
@@ -26,6 +29,9 @@
 
             <nav id="center-nav">
                 <ul>
+                    <li><a href="#Algorithm-Development-Process">Algorithm-Development-Process</a></li>
+                    <li><a href="#Big-O-Time-Complexities">Big-O-Time-Complexities</a></li>
+                    <li><a href="#Data-Structues">Data-Structues</a></li>
                     <li><a href="#Two-Pointer">Two-Pointer</a></li>
                     <li><a href="#Pair-Step">Pair-Step</a></li>
                     <!-- <li><a href="#Algo-link">Algo-link</a></li> -->
@@ -34,9 +40,12 @@
         
             <main>
                 <article id="Algorithm-Development-Process">
-                    <h2>Algorithm Developmenet Process :</h2>
+                    <h2>Algorithm Development Process :</h2>
                     <h3>Description :</h3>
-                        <p>Creating algorithms should follow basic steps: </p>
+                        <p>An algorithm is a series of defined instructions that perform a task.</p>
+                        <p>Assumptions on the underlying data can have an effect on speed and efficiency.</p>
+                        <p>Normalized data will allow algorithms to be used for many input types.</p>
+                    <h3>Creating algorithms should follow basic steps: </h3>
                         <ol>
                             <li>Understand the Problem</li>
                             <li>Decide On:
@@ -53,8 +62,21 @@
                             <li>Code the Algorithm</li>
                         </ol>
                         <p>Each step in the process should be achieved in order. However, achieving the simplest soltuion is still considered an algorithm even if its worst case</p>
-                    <h3>Big O Time Complexities : common</h3>
-                        <h4>Smallest to Larger</h4>
+                    <h3>Assumptions :</h3>
+                        <p>Optimized and Efficient Algorithms don't come from data structure use or leet programming skills, only from Informed Assumptions.</p>
+                        <p>Performing brute force methods and naive approaches to problems are not incorrect, but can result in MESSY and INEFFICIENT code.</p>
+                        <p>Assumptions = means to guess or assume that the data is following a certain derived rule.</p>
+                        <p>For Example, if there are three digits and we need to determine which is the median, we can make a guess that one of the digits is the maximum --- we can always correct false assumptions, as we are attempting to solve the solution --- this maximum can either be TRUE or FALSE, if it's TRUE we have one less step, if it's FALSE we would have already spent a step checking it anyway, if we had not selected a maximum.</p>
+                        <!-- <ul>
+                            <li></li>
+                        </ul> -->
+                </article>
+
+                <hr>
+
+                <article id="Big-O-Time-Complexities">
+                    <h2>Big O Time Complexities : common</h2>
+                    <h3>Smallest to Larger :</h4>
                         <ul>
                             <li>O(1) : Constant Time</li>
                             <li>O(log n) : Logarithmic</li>
@@ -63,6 +85,147 @@
                             <li>O(n^2) : Quadratic</li>
                             <li>O(n!) : Factorial</li>
                         </ul>
+                </article>
+
+                <hr>
+
+                <article id="Data-Structues">
+                    <h2>Java Data Structures :</h2>
+                    <h3>Description :</h3>
+                        <p>Traversing sorted lists allows for bi-directional incrementing.  Two-pointers allows for array like structures to be travered in half (n/2) the time.</p>
+                    <h3>Structs :</h3>
+                        <ol>
+                            <li>List
+                                <p>Interface</p>
+                                <h4>Instantiated with :</h4>
+                                <ul>
+                                    <li>Vector > subclass Stack - synchronized</li>
+                                    <li>ArrayList - dynamically resizable, slower than arrays - non-synchronized</li>
+                                    <li>LinkedList - non-memory-contiguous data</li>
+                                </ul>
+                                <details>
+                                    <summary>Stack Methods</summary>
+                                    <ol>
+                                        <li>empty() - same as isEmpty</li>
+                                        <li>peek() - look at head without removal</li>
+                                        <li>pop() - removes from top</li>
+                                        <li>push(i) - add to top</li>
+                                        <li>search(i) - locate pos from top</li>
+                                    </ol>
+                                </details>
+                            </li>
+
+                            <li>Queue - *PriorityQueue* - First in, First out - implemented as Queue with LinkedList
+                                <p>Interface</p>
+                                <p>When order matters!</p>
+                                <h4>Instantiated with :</h4>
+                                <ul>
+                                    <li>PriorityQueue</li>
+                                    <li>ArrayDeque - *Deque*</li>
+                                </ul>
+                                <details>
+                                    <summary>Queue Methods</summary>
+                                    <ol>
+                                        <li>empty() - same as isEmpty</li>
+                                        <li>peek() - look at head without removal</li>
+                                        <li>pop() - removes from top</li>
+                                        <li>push(i) - add to top</li>
+                                        <li>search(i) - locate pos from top</li>
+                                    </ol>
+                                </details>
+                            </li>
+
+                            <li>Deque - Double-Ended Queue
+                                <p>Interface</p>
+                                <p>When order matters!</p>
+                                <h4>Instantiated with :</h4>
+                                <ul>
+                                    <li>ArrayDeque</li>
+                                </ul>
+                                <details>
+                                    <summary>Queue Methods</summary>
+                                    <ol>
+                                        <li>empty() - same as isEmpty</li>
+                                        <li>peek() - look at head without removal</li>
+                                        <li>pop() - removes from top</li>
+                                        <li>push(i) - add to top</li>
+                                        <li>search(i) - locate pos from top</li>
+                                    </ol>
+                                </details>
+                            </li>
+
+                            <li>Set - Unique values
+                                <p>Interface</p>
+                                <p>useful if data to track is supposed to be unique. Can allow for O(1) search time if Set is hash based.</p>
+                                <p>usually never in order placed.</p>
+                                <h4>Implementations :</h4>
+                                <ul>
+                                    <li>TreeSet</li>
+                                    <li>HashSet</li>
+                                    <li>LinkedHashSet</li>
+                                </ul>
+                                <details>
+                                    <summary>Queue Methods</summary>
+                                    <ol>
+                                        <li>empty() - same as isEmpty</li>
+                                        <li>peek() - look at head without removal</li>
+                                        <li>pop() - removes from top</li>
+                                        <li>push(i) - add to top</li>
+                                        <li>search(i) - locate pos from top</li>
+                                    </ol>
+                                </details>
+                            </li>
+
+                            <li>HashSet - Unique values in a hash table</li>
+
+                            <li>LinkedHashSet - doubly-linked list - reatains order</li>
+
+                            <li>SortedSet - sorted
+                                <p>Interface</p>
+                                <h4>Implementations :</h4>
+                                <ul>
+                                    <li>TreeSet</li>
+                                </ul>
+                            </li>
+                            
+
+                            <li>Map - Key value pairs
+                                <p>useful if data to track is linked by two variables.</p>
+                                <h4>Implementations :</h4>
+                                <ul>
+                                    <li>HashMap</li>
+                                    <li>TreeMap</li>
+                                </ul>
+                            </li>
+
+                            <li>Stack - First in, Last out - implemented as Stack with Stack library
+                                <p>Interface + Instantiated class</p>
+                                <p>Can track items by adding to structure, and last item inserted can easily be tracked - can also prevent unecessary re-iterating through elements.</p>
+                                <details>
+                                    <summary>Stack Methods</summary>
+                                    <ol>
+                                        <li>empty() - same as isEmpty</li>
+                                        <li>peek() - look at head without removal</li>
+                                        <li>pop() - removes from top</li>
+                                        <li>push(i) - add to top</li>
+                                        <li>search(i) - locate pos from top</li>
+                                    </ol>
+                                </details>
+                            </li>
+                            
+                            <li>Binary Search* Tree - 
+                                <p>Binary Tree = two capable nodes under parents
+                                </br>
+                                Binary Search* Tree = Natrually stays sorted.</p>
+                                <p>Pre-Order, Post-Order, In-Order</p>
+                                <details>
+                                    <summary></summary>
+                                    <ol>
+                                        <li>insert() - only add - can be recursed.</li>
+                                    </ol>
+                                </details>
+                            </li>
+                        </ol>
                 </article>
 
                 <hr>
@@ -106,6 +269,22 @@
                             <li>Create two indexes</li>
                             <li>Create two for loops</li>
                             <li>Iterate the 1st in the outer and iterate the 2nd in the inner.</li>
+                        </ol>
+                    <h3>Example Problem :</h3>
+                        <a href="https://codepen.io/trickynicky/pen/oNoZxrq" target="_blank">https://codepen.io/trickynicky/pen/oNoZxrq</a>
+                </article>
+
+                <article id="Recursion-Basics">
+                    <h2>Recursion-Basics - Process to forming a recursive loop :</h2>
+                    <h3>Description :</h3>
+                        <p>Recursive functions call on themselves to iterate through a process before reaching the outcome.</p>
+                    <h3>Problems Solved :</h3>
+                        <p>Simple to read code, without if else branches that lead to other functions.</p>
+                    <h3>Basic Rules to follow :</h3>
+                        <ol>
+                            <li>Always return, unless acting by reference on the datastructure.</li>
+                            <li>Always condition before stepping into recursion.</li>
+                            <li>Recursion should only act on the given parameters.</li>
                         </ol>
                     <h3>Example Problem :</h3>
                         <a href="https://codepen.io/trickynicky/pen/oNoZxrq" target="_blank">https://codepen.io/trickynicky/pen/oNoZxrq</a>
