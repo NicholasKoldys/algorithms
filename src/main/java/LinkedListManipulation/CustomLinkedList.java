@@ -33,10 +33,22 @@ public class CustomLinkedList {
             } else {
                 holder.data = String.valueOf(i) + SpecialCharFunctions.getiThAlphabetChar(i);
             }
-            System.out.print( i + ":" + holder.data + " -> " );
             holder = holder.next;
         }
 
         return cl;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Node nx = this.head;
+        int i = 0;
+        while(nx.next != null) {
+
+            sb.append(i); sb.append(":"); sb.append(nx.data); sb.append(" -> ");
+            i++;
+            nx = nx.next;
+        }
+        return sb.toString();
     }
 }
